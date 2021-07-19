@@ -1,15 +1,7 @@
 pipeline {
     agent any
 	
-    stages {
-        stage('Git-Checkout') {
-            steps {
-                    echo "Checking out from Git Repo";
-                    /* Put in the actual Code for checking out code from your Git Repo here */
-                    git 'https://github.com/fravemel/Pipeline_Script'
-            }
-        }
-        
+    stages {        
         stage('Build') {
             steps {
                     echo "Building the checked-out project!";
